@@ -1,0 +1,20 @@
+.list {
+    background-color: #1e1e1e;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.list h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.1em;
+}
+
+.add-card {
+    background-color: #333;
+    color: #ccc;
+    padding: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 3px;
+}
