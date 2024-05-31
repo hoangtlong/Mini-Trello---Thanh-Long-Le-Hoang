@@ -1,8 +1,8 @@
 {
 	"type": "service_account",
 	"project_id": "mini-trello-af759",
-	"private_key_id": "6b9ad33fdc6b49d6627735b0ef89a459a336b99f",
-	"private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCy47WPv5IAD3aM\nVBPpJjcIr4JM7Awvfx3rxgNJ16p2HrIc5c+JeUHpE7WsBNdxwSYoE4ZfjqgczVRZ\nK1bfWqUxiGQi6EUrfYl12sCPkQO9aKf5v86p+pclCryqkXuMAiDqEHCvTGfvqAUm\nHjd/KdlVipCSksXCUjWrkrf+XOznGGmzzFdro43zNROsVAxlOhlsuSdYoZk7YVPI\nQp1LMduKCICd7nYEbRn6pmmUM6ipUlLOX4cG5B9DAQYGWrEDZ93JKZ3deQcA+flE\nrLCknt3M9JMQT0F472bfADRDnd7dRjMRLPz3PsN8gxORsGhFWWJUS0jxSL8TSaoh\n9spFaPCvAgMBAAECggEALMh5nutn6vD0DgxMUb054MhDN+uN32QUwv32u8ksSNbF\nYxua+YDsIaPIArDRmI4wda7xoEFvz4oNmCcT3+Vq3nwVCXIZQtpyC5mARFCa3ZNy\nHcFJRN9RcDoAYjj6c2HjCIWmGBRqHqJy64h7/y8kU9hU+gSZUlzPR8z6l8h+nBlh\n+OoHdn98qguhlb0MV4aveTmPWKx88wl6DlJeEkpW+qAcYg3ROh2I9VLxQPgbif03\nJR85y7QWEYsnyitTO+DJ/lOG//DEydAIyfwXrHp4L5ZWsdoyCHoDoIR1FQuzQmfp\n+Xz4XBBkI5z5WEvyDr376IBjFb7wS2r4L/jF2CbgHQKBgQDyw0omOQOqeIpLIMMV\nS6kJg2drU+4g8U3+nGcnQrUpC2iy3JMmrOzojATn1V2X4jk5df9i1CGiRgDWx7Sa\nFQ9v7GD833oQMeUcdf/qHuPg8fffNu4pFG+stbfbUUiHDMryn351bMtscAtxPJES\nUk3BQqbpJOvs1Fn+XQ1o1sUUvQKBgQC8pNDMDhLwYgBF9/5QVeW+JGzSNfbQHxi8\n5jJB8irmLJhIXZeVB0VZ0v6eswLHBqO+ER214dNp8yy+PxN63GalYM4hwNtiZu4v\n/1oi8PS35wBhbZdtv81wbRQs489RtjPMCv7Z6Vr4zZVKExFlbtnv7/kHsM5qJhtX\n/plCVd+v2wKBgQCOWlH6w+gQaIq/r0B2Fl3TBEj6uMakbpuLt+8NKKLOpLAKYimv\nvitV2fVudMFjNPbVaQoOy9HFNEN9rrGKwNrCiNv+rJUJNhjhbZhZky+RUpJFRBK3\n6BHsNsrPQoTDHI9NYpVnChrnRXSQPDHdioGp2AnEITBvOb5j1/DrDzWWCQKBgQCK\n/OwRzDTMA4isBKHNUtxokbHT14q3oJG7a+ePivtsh2LTvpFWbfr8yWZsSvw643t1\nKGs5fN8latOGgDa8CPNf2clGOS/qemf32S3yHJJRhNNU9UfixrR4pwV8ZYR0ccgM\nB/XpW/N46Q+beh0RHPFZxPc4YV5T+yueU6lbpKWgjQKBgBJwm7Gl7eeI2MK2E0/+\nVxM96jUhhrY26BE770IYCvs8lvh1GpUvkh74EjArCPpZxnym8qNNaTm/mVDGK5nL\nli09RvLS1ChLtX/9OXUYrLdmed4wE1WrlPES3Pb3obz6yhnPxTQ3XBOL0RF3+GhA\nruiJ1hso4BsDRw0ALjbk2RU4\n-----END PRIVATE KEY-----\n",
+	"private_key_id": "process.env.PRIVATE_KEY_ID",
+	"private_key": "process.env.PRIVATE_KEY",
 	"client_email": "firebase-adminsdk-anmh1@mini-trello-af759.iam.gserviceaccount.com",
 	"client_id": "112650174411495380261",
 	"auth_uri": "https://accounts.google.com/o/oauth2/auth",

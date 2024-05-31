@@ -88,7 +88,7 @@ const verify = async (req, res) => {
 		await admin.firestore().collection('verificationCodes').doc(email).delete();
   
 		// Tạo token hoặc xử lý xác thực người dùng
-		const token = '4a8c9791575834087cc5d7d2';
+		const token = process.env.TOKEN;
   
 		res.status(200).json({ accessToken: token });
 	  } else {
