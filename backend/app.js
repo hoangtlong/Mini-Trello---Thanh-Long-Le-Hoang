@@ -54,7 +54,7 @@ app.use(bodyParser.json());
 
 // Routes
 app.use('/api/auth', authRoutes);
-app.use('/api/', boardRoutes);
+app.use('/api/boards', boardRoutes);
 
 // Middleware (authentication)
 app.use(authMiddleware.authenticateRequest);

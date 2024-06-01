@@ -2,48 +2,53 @@ const admin = require('firebase-admin');
 const db = admin.firestore();
 
 const createBoard = async (req, res) => {
-  const { name, description } = req.body;
-  const userId = req.userId;
+	const { name, description } = req.body;
+	const userEmail = req.user.email; // Sử dụng email làm định danh
+  
+	try {
+	  const newBoard = {
+		name,
+		description,
+		userEmail, // Lưu email để xác định người tạo bảng
+		createdAt: new Date().toISOString()
+	  };
 
-  try {
-    const boardRef = await db.collection('boards').add({
-      name,
-      description,
-      userId
-    });
-
-    res.status(201).send({
-      id: boardRef.id,
-      name,
-      description
-    });
-  } catch (error) {
-    console.error('Error creating board:', error);
-    res.status(500).send({ error: 'Error creating board' });
+	  console.log('data board', name);
+  
+	  // Thêm bảng mới vào Firestore
+	  const boardRef = await admin.firestore().collection('boards').add(newBoard);
+  
+	  res.status(201).json({
+		id: boardRef.id,
+		...newBoard
+	  });
+	} catch (error) {
+	  console.error('Error creating board:', error);
+	  res.status(500).json({ error: 'Error creating board' });
+	}
   }
-};
 
 const getAllBoards = async (req, res) => {
-  const userId = req.userId;
-
-  try {
-    const snapshot = await db.collection('boards').where('userId', '==', userId).get();
-
-    if (snapshot.empty) {
-      return res.status(200).send([]);
-    }
-
-    const boards = snapshot.docs.map(doc => ({
-      id: doc.id,
-      ...doc.data()
-    }));
-
-    res.status(200).send(boards);
-  } catch (error) {
-    console.error('Error retrieving boards:', error);
-    res.status(500).send({ error: 'Error retrieving boards' });
+	try {
+	  const userEmail = req.user.email; // Lấy email từ thông tin người dùng đã xác thực
+  
+	  const boardsSnapshot = await admin.firestore().collection('boards').where('userEmail', '==', userEmail).get();
+  
+	  const boards = [];
+	  boardsSnapshot.forEach((doc) => {
+		boards.push({
+		  id: doc.id,
+		  ...doc.data()
+		});
+	  });
+  
+	  res.status(200).json(boards);
+	} catch (error) {
+	  console.error('Error retrieving boards:', error);
+	  res.status(500).json({ error: 'Error retrieving boards' });
+	}
   }
-};
+
 
 const getBoardById = async (req, res) => {
   const boardId = req.params.id;
