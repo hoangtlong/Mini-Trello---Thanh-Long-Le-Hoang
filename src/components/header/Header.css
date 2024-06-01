@@ -1,0 +1,45 @@
+/* Container cho phần header */
+.header {
+	display: flex;
+	justify-content: space-between; /* Chia đều khoảng cách giữa logo và phần bên phải */
+	align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+	padding: 5px 15px; /* Giảm khoảng cách bên trong header */
+	background-color: rgba(43, 48, 53, 1); /* Màu nền trắng */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+	height: 50px; /* Thiết lập chiều cao header */
+  }
+  
+  /* Phần bên trái chứa logo */
+  .header-left {
+	display: flex;
+	align-items: center;
+  }
+  
+  .logo-header {
+	height: 40px; /* Chiều cao logo nhỏ hơn */
+  }
+  
+  /* Phần bên phải chứa chuông thông báo và avatar */
+  .header-right {
+	display: flex;
+	align-items: center;
+  }
+  
+  .icon-bell {
+	font-size: 1.5rem; /* Kích thước icon */
+	margin-right: 15px; /* Giảm khoảng cách giữa chuông và avatar */
+	cursor: pointer;
+  }
+  
+  .user-profile {
+	display: flex;
+	align-items: center;
+  }
+  
+  .avatar {
+	height: 30px; /* Chiều cao avatar nhỏ hơn */
+	width: 30px; /* Chiều rộng avatar tương ứng */
+	border-radius: 50%; /* Bo tròn avatar */
+	cursor: pointer;
+  }
+  

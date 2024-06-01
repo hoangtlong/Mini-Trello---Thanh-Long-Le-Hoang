@@ -1,0 +1,62 @@
+/* src/components/TaskBoard.css */
+.task-board {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+  }
+  
+  .task-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #4b2e4e;
+	color: white;
+	padding: 10px 20px;
+  }
+  
+  .task-header h1 {
+	margin: 0;
+  }
+  
+  .invite-btn {
+	background-color: #6b4e71;
+	border: none;
+	color: white;
+	padding: 10px 20px;
+	cursor: pointer;
+  }
+  
+  .task-content {
+	display: flex;
+	padding: 20px;
+	flex-wrap: wrap;
+	gap: 20px;
+  }
+  
+  .task-list {
+	background-color: #1a1a1a;
+	color: white;
+	padding: 10px;
+	width: 250px;
+  }
+  
+  .task-list h2 {
+	margin: 0;
+	padding: 10px 0;
+  }
+  
+  .task-card {
+	background-color: #333;
+	padding: 10px;
+	margin: 10px 0;
+	cursor: pointer;
+  }
+  
+  .add-card, .add-list {
+	background-color: #6b4e71;
+	color: white;
+	padding: 10px;
+	text-align: center;
+	cursor: pointer;
+  }
+  

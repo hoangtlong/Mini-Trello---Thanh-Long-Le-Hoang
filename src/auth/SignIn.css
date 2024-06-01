@@ -7,28 +7,29 @@
     font-family: Arial, sans-serif;
 }
 
-body {
+/*body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #f9f9f9;
-}
+}*/
 
 .login-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    max-width: 1200px;
+    width: 50%;
+    max-width: 40%;
     margin: auto;
     position: relative;
 }
 
 .login-form {
     background-color: #fff;
-    padding: 40px;
-    border-radius: 8px;
+    padding: 30px;
+    border-radius: 4px;
+	margin-top: 5%;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
     z-index: 2;
@@ -44,7 +45,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-input[type="email"] {
+input[type="email"], input[type="text"]{
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -54,6 +55,7 @@ input[type="email"] {
 
 button {
     width: 100%;
+	margin-top: 1px;
     padding: 10px;
     background-color: #007bff;
     color: #fff;
@@ -80,25 +82,25 @@ button:hover {
 }
 
 .illustrations {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-    z-index: 1;
-}
-
-.illustration-left, .illustration-right {
-    width: 20%;
-    max-width: 200px;
-}
-
-.illustration-left {
-    margin-left: 50px;
-}
-
-.illustration-right {
-    margin-right: 50px;
-}
+	position: relative;
+	height: 100vh; /* Đặt chiều cao để đảm bảo div bao phủ toàn màn hình */
+  }
+  
+  .illustration-left {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	max-width: 250px; /* Đặt kích thước tối đa cho hình ảnh, bạn có thể tùy chỉnh */
+	max-height: 500px;
+	margin: 10px; /* Đặt khoảng cách từ mép màn hình */
+  }
+  
+  .illustration-right {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	max-width: 250px; /* Đặt kích thước tối đa cho hình ảnh, bạn có thể tùy chỉnh */
+	max-height: 500px;
+	margin: 10px; /* Đặt khoảng cách từ mép màn hình */
+  }
+  

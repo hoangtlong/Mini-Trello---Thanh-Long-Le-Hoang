@@ -1,0 +1,25 @@
+.all-boards-container {
+	padding: 20px;
+  }
+  
+  .boards-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Các cột có chiều rộng tối thiểu là 250px và tự động lấp đầy */
+	gap: 20px; /* Khoảng cách giữa các phần tử */
+  }
+  
+  .board-card {
+	background-color: #fff; /* Màu nền trắng */
+	padding: 20px;
+	border-radius: 8px; /* Bo góc */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+  }
+  
+  .board-card h3 {
+	margin: 0 0 10px; /* Khoảng cách giữa tiêu đề và mô tả */
+  }
+  
+  .board-card p {
+	margin: 0; /* Xóa khoảng cách mặc định của đoạn văn */
+  }
+  
