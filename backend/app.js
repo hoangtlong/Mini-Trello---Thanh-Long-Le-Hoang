@@ -45,7 +45,7 @@ app.get('/auth/github/callback', async (req, res) => {
     
     res.cookie('user', JSON.stringify(userData), { maxAge: 900000, httpOnly: true });
     // Chuyển hướng người dùng trở lại frontend sau khi xác thực thành công
-    res.redirect('http://localhost:3000/board');
+    res.redirect('http://localhost:3000/boards');
 });
 
 
@@ -57,7 +57,7 @@ app.use(cors());
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api', boardRoutes);
-app.use('/api', cardRoutes); 
+app.use('/api/cards', cardRoutes); 
 app.use('/api', taskRoutes); // Use task routes
 
 
