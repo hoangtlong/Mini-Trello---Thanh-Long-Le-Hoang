@@ -1,18 +1,23 @@
 const express = require('express');
 const axios = require('axios');
 const cookieParser = require('cookie-parser');
+const cors = require('cors');
 const bodyParser = require('body-parser');
+const http = require('http');
+const WebSocket = require('ws');
+
 const authRoutes = require('./routes/authRoutes');
 const boardRoutes = require('./routes/boardRoutes');
+const taskRoutes = require('./routes/taskRoutes');
+const cardRoutes = require('./routes/cardRoutes');
 const authMiddleware = require('./middlewares/authMiddleware');
-const authGithub = require('./routes/authGithub');
-const cors = require('cors');
+
 const app = express();
+const server = http.createServer(app);
 
-app.use(cookieParser());
-
-const clientID = 'Ov23liIJWY0E90MqXIMO';
-const clientSecret = '285a0997626bf8f4a3b951bf0f04cb3797be2493';
+///github
+const clientID = process.env.GITHUB_CLIENT_ID;
+const clientSecret = process.env.CLIENT_SECRET;
 const redirectURI = 'http://localhost:5000/auth/github/callback';
 
 app.get('/auth/github', (req, res) => {
@@ -43,24 +48,38 @@ app.get('/auth/github/callback', async (req, res) => {
     res.redirect('http://localhost:3000/board');
 });
 
-// Cho phép tất cả các tên miền
-app.use(cors());
-
 
 // Middleware
-//app.use('/auth/github/callback', authGithub);
-
 app.use(bodyParser.json());
+app.use(cookieParser());
+app.use(cors());
 
 // Routes
 app.use('/api/auth', authRoutes);
-app.use('/api/boards', boardRoutes);
+app.use('/api', boardRoutes);
+app.use('/api', cardRoutes); 
+app.use('/api', taskRoutes); // Use task routes
 
-// Middleware (authentication)
-app.use(authMiddleware.authenticateRequest);
 
+// WebSocket connection
+const wss = new WebSocket.Server({ server });
+
+wss.on('connection', (ws) => {
+    console.log('Client connected');
+
+    ws.on('message', (message) => {
+        console.log('received: %s', message);
+    });
+
+    ws.on('close', () => {
+        console.log('Client disconnected');
+    });
+});
+
+// Pass the WebSocket server instance to the routes
+//app.locals.wss = wss;
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
+server.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

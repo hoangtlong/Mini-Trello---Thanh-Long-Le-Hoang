@@ -4,10 +4,10 @@ const verifyToken = require('../middlewares/auth');
 
 const router = express.Router();
 
-router.post('/create', verifyToken, createBoard);
-router.get('/getall', verifyToken, getAllBoards);
-router.get('/detail/:id', verifyToken, getBoardById);
-router.put('/update/:id', verifyToken, updateBoard);
-router.delete('/delete/:id', verifyToken, deleteBoard);
+router.post('/boards', verifyToken, createBoard);
+router.get('/boards', verifyToken, getAllBoards);
+router.get('/boards/:id', verifyToken, getBoardById);
+router.put('/boards/:id', verifyToken, updateBoard);
+router.delete('/boards/:id', verifyToken, deleteBoard);
 
 module.exports = router;
