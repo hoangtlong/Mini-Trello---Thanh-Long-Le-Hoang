@@ -46,7 +46,7 @@ const SignUp = () => {
 	  console.log('data response',data);
       if (response.ok) {
         console.log('Email verified successfully');
-		navigate('/board');
+		navigate('/boards');
       } else {
         console.error('Error:', data);
       }

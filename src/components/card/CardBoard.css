@@ -1,11 +1,12 @@
-/* src/components/TaskBoard.css */
-.task-board {
+/* src/components/cardBoard.css */
+.card-board {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
+	/*background-color: #6b4e71;*/
   }
   
-  .task-header {
+  .card-header {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -14,7 +15,7 @@
 	padding: 10px 20px;
   }
   
-  .task-header h1 {
+  .card-header h1 {
 	margin: 0;
 	background-color: #4b2e4e;
   }
@@ -28,26 +29,27 @@
 	cursor: pointer;
   }
   
-  .task-content {
+  /*.card-content {
 	display: flex;
 	padding: 20px;
 	flex-wrap: wrap;
 	gap: 20px;
-  }
+	background-color: rgb(117, 221, 127);
+  }*/
   
-  .task-list {
+  .card-list {
 	background-color: #1a1a1a;
 	color: white;
 	padding: 10px;
 	width: 250px;
   }
   
-  .task-list h2 {
+  .card-list h2 {
 	margin: 0;
 	padding: 10px 0;
   }
   
-  .task-card {
+  .card-card {
 	background-color: #333;
 	padding: 10px;
 	margin: 10px 0;

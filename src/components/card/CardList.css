@@ -1,0 +1,12 @@
+.card-list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+	background-color: aqua;
+}
+
+.card {
+    background-color: #c12e2e;
+    padding: 10px;
+    border-radius: 5px;
+}
