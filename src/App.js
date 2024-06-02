@@ -18,13 +18,6 @@
 		//	console.error(error);
 		//});
 
-		
-			set(child(dbRef, `users/2`), {
-			  id: 2,
-			  name: "test",
-			});
-		  
-
 	return (
 		<div className="App">
 			<RoutePage/>

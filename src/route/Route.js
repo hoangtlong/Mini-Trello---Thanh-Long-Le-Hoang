@@ -10,6 +10,9 @@ import SignUp from '../auth/SignUp';
 import CreateBoard from '../components/board/CreateBoard';
 import BoardDetail from '../components/board/BoardDetail';
 import Header from '../components/header/Header';
+import CreateTask from '../components/task/CreateTask';
+import CardBoard from '../components/card/CardBoard';
+import CreateCard from '../components/card/CreateCard';
 
 const RoutePage = () => {
 	return (
@@ -32,10 +35,13 @@ const RoutePage = () => {
 					<Routes>
 						<Route path="/emailverified" element={<EmailVerification/>}/>
 						<Route path="/boards" element={<BoardManagement/>}/>
-						<Route path="/boardlist" element={<Board/>}/>
+						<Route path="/board-card/:id" element={<Board/>}/>
 						<Route path="/signup" element={<SignUp/>}/>
 						<Route path="/create-board" element={<CreateBoard/>} />
 						<Route path="/boarddetail/:id" element={<BoardDetail/>} />
+						<Route path="/taskcreate" element={<CreateTask/>} />
+						<Route path="/board/:boardId" element={<CardBoard />} />
+						<Route path="/boards/:boardId/cards" element={<CreateCard />} />
 					</Routes>
 				  </>
 				}

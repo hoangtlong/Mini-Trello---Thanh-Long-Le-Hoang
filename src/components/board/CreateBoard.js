@@ -14,7 +14,7 @@ function CreateBoard() {
     const token = localStorage.getItem('token'); // Lấy token từ localStorage
 
     try {
-      const response = await fetch('/api/boards/create', {
+      const response = await fetch('/api/boards', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -27,7 +27,7 @@ function CreateBoard() {
         const data = await response.json();
         console.log('Board created successfully:', data);
         // Cập nhật giao diện hoặc chuyển hướng đến trang chi tiết bảng
-		navigate('/board')
+		navigate('/boards')
       } else {
         const errorData = await response.json();
         setError(errorData.error);

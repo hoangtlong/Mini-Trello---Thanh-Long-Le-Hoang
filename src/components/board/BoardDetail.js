@@ -13,7 +13,7 @@ function BoardDetail() {
   useEffect(() => {
     const fetchBoardDetails = async () => {
       try {
-        const response = await fetch(`/api/boards/detail/${id}`, {
+        const response = await fetch(`/api/boards/${id}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ function BoardDetail() {
 
   const handleUpdateBoard = async () => {
     try {
-      const response = await fetch(`/api/boards/update/${id}`, {
+      const response = await fetch(`/api/boards/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

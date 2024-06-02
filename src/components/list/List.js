@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '../card/AddCard';
+import Card from '../task/AddCard';
 import './List.css';
 
 function List({ title, cards }) {

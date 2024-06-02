@@ -1,91 +1,101 @@
+.board-bg {
+    position: absolute;
+    /*top: 0;*/
+    left: 0;
+    width: 100%;
+	height: 100%;
+    background-color: rgba(47, 56, 64, 1);
+
+}
+
 /* Container for the whole layout */
 .board-management {
-	display: flex;
-	height: 100vh; /* Full height of the viewport */
-	background-color: #2b3a47;
-  }
-  
-  /* Sidebar styling */
-  .sidebar {
-	width: 250px; /* Fixed width for the sidebar */
-	background-color: #1f2a36;
-	color: #fff; /* White text color */
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 20px;
-  }
-  
-  .logo {
+    display: flex;
+	min-height: 100vh; 
+    background-color: rgba(47, 56, 64, 1);
+	width: 100%;
+
+}
+
+/* Sidebar styling */
+.sidebar-m {
+    width: 250px; /* Fixed width for the sidebar */
+    color: #fff; /* White text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    /*background-color: rgb(19, 40, 58);*/ 
+}
+
+.logo {
 	font-size: 2rem; /* Large font size for the logo */
 	margin-bottom: 20px;
-  }
-  
-  .menu {
+}
+
+.menu {
 	width: 100%;
-  }
-  
-  .menu-item {
+}
+
+.menu-item {
 	display: flex;
 	align-items: center;
 	padding: 10px 20px;
 	cursor: pointer;
-  }
-  
-  .menu-item i {
+}
+
+.menu-item i {
 	margin-right: 10px; /* Space between icon and text */
-  }
-  
-  .menu-item.active,
-  .menu-item:hover {
+}
+
+.menu-item.active,
+.menu-item:hover {
 	background-color: rgba(22, 32, 50, 1); /* Darker background on hover/active */
-	/*box-shadow: rgba(218, 218, 218, 0.02) 0px 1px 3px 0px, rgba(216, 218, 219, 0.15) 0px 0px 0px 1px;*/
 	border: 1px solid;
-  	border-color: #fefefe;
-  	padding: 10px;
-  	border-radius: 0px;
-  	margin: 10px;
-  }
-  
-  /* Main content styling */
-  .main-content {
-	flex: 1; /* Take up the remaining space */
-	/*background-color: #f4f4f4; Light background color*/
+	border-color: #fefefe;
+	padding: 10px;
+	border-radius: 0px;
+	margin: 10px;
+}
+
+/* Main content styling */
+.main-content-m {
+	flex-grow: 1; /* This makes the main content take all the remaining space */
+	/*background-color: rgb(24, 117, 198);*/
 	padding: 20px;
-  }
- 
-  .workspace-title {
-	font-size: 1.5rem; /* Larger font size for the title */
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 20px;
+}
+
+.board-m-title{
+	/*margin-top: 5px;*/
+	text-align: left;
+	font-size: 12px;
+}
+
+.workspace-title {
+	font-size: 1.3rem; /* Larger font size for the title */
 	color: rgba(144, 149, 161, 1);
-	/*background-color: aqua;*/
-  }
-  
-  .user-profile {
+	margin: 15px;
+	text-align: left;
+}
+
+.user-profile {
 	display: flex;
 	align-items: center;
-  }
-  
-  .user-profile i {
-	margin-right: 10px; /* Space between icon and initials */
-  }
+}
 
-  
-  .workspace {
-	margin-top: 20px;
-  }
-  
-  .create-board {
-	background-color: #fff; /* White background */
-	border: 2px dashed #ccc; /* Dashed border */
-	color: #333; /* Dark text color */
-	padding: 20px;
-	max-width: 25%;
-	/*height: 85px;*/
-	text-align: center;
-	cursor: pointer;
-  }
-  
-  .create-board:hover {
-	background-color: #e9e9e9; /* Slightly darker background on hover */
-  }
-  
+.user-profile i {
+	margin-right: 10px; /* Space between icon and initials */
+}
+
+.workspace {
+	width: 100%;
+}

@@ -7,7 +7,7 @@ function Header() {
 	const navigate = useNavigate();
 
 	const handleHome = () => {
-		navigate('/');
+		navigate('/boards');
 	}
 
   return (

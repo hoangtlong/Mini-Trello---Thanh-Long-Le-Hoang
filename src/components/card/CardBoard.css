@@ -16,9 +16,11 @@
   
   .task-header h1 {
 	margin: 0;
+	background-color: #4b2e4e;
   }
   
   .invite-btn {
+	width: 100px;
 	background-color: #6b4e71;
 	border: none;
 	color: white;
